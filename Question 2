@@ -1,0 +1,16 @@
+def fileLength(filename):
+  #reading data
+  try:
+    f=open(filename,'r')
+    data=f.readlines()
+    line=""
+    for i in data:
+      line+=i
+    result=len(line)
+    return result
+ except FileNotFoundError:
+    return ("file {} not found.",format(filename))
+  
+  print(fileLength('midterm.py'))
+  print(fileLength('idterm.py'))
+  
